@@ -1,20 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 
-const title = "Welcome to my Profile!";
-
-const h2style = {
-  backgroundColor: "purple",
-  color: "white",
-  textAlign: "center",
-  padding: "15px"
-}
+const todoTitle = "ToDo App"
+const todoDesc = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum aut consectetur esse illum similique temporibus fugiat eveniet optio quam amet";
+const date = new Date();
+const dateName = date.getDate();
+const monthName = date.getMonth();
+const yearName = date.getFullYear();
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <div>
-    <h1 style={{color: "red"}}>Hello</h1>
-    <h2 style={h2style}>{title}</h2>
-    <p className='headingStyle'>This is Asif Shahriar, Welcome to my profile</p>
+    <h1 className='headingStyle'>Todo App</h1>
+    <div className='card'>
+      <h3 className='cardTitle'>{todoTitle}</h3>
+      <p className='cardDesc'>{todoDesc}</p>
+      <p className='cardFooter'>{dateName+"/"+monthName+"/"+yearName}</p>
+    </div>
   </div>
 );
